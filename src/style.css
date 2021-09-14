@@ -1,4 +1,6 @@
-
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -26,4 +28,54 @@ header {
   border-radius: 5px;
   background: #adb1a7;
   padding: 1rem;
+}
+
+.footer {
+  position: relative;
+  background-color: rgba(197, 192, 192, 0.452);
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.movies-list {
+  padding: 2rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item img {
+  width: 25rem;
+}
+
+.comments {
+  font-size: 2rem;
+}
+
+.info {
+  display: flex;
+  font-size: 2.2rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.search {
+  padding: 1rem;
+}
+
+.col-12 {
+  width: 100%;
 }
