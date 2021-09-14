@@ -2,7 +2,6 @@
 
 # Microverse-ToDo-List
 
-![ToDoListComplete](https://user-images.githubusercontent.com/69011963/131209759-a2cc5bf5-a83e-4c01-8c20-d3bb4327b6dc.gif)
 
 Additional description about the project and its features.
 
@@ -27,11 +26,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-[Live Demo Link](https://rustamxon7.github.io/To-do-list/)
+
 
 ### Install
 
-To clone this repo go to "https://github.com/Rustamxon7/To-do-list.git"
+To clone this repo go to "https://github.com/Donard97/JavaScript-Capstone-Project"
 
 git clone your repo
 
