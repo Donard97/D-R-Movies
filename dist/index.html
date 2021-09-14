@@ -4,14 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV movies List</title>
-  <script defer src="/JavaScript-Capstone-Project/bundle.js"></script></head>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script defer src="index.bundle.js"></script></head>
   <body>
     <header class="header">
       <div class="logo">D&R Movies</div>
       <div class="show-list">Movies</div>
     </header>
+    <div class="search">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body"></i>
+            </div>
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords" />
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-lg btn-dark" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="movies">
+      <ul class="movies-list"></ul>
+    </div>
+
     <footer class="footer">
-      <p>Created By Donard & Rustamjon under CC licence </p>
+      <p>Created By Donard & Rustamjon under CC licence</p>
     </footer>
   </body>
 </html>
