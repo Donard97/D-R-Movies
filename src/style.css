@@ -1,4 +1,6 @@
-
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -26,4 +28,14 @@ header {
   border-radius: 5px;
   background: #adb1a7;
   padding: 1rem;
+}
+
+.footer {
+  position: absolute;
+  background-color: rgba(197, 192, 192, 0.452);
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
 }
