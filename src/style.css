@@ -1,4 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  background-color: rgba(197, 192, 192, 0.452);
+  padding: 2rem;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  border-radius: 25px;
+  background: #adb1a7;
+  padding: 1rem;
+}
+
+.show-list {
+  border-radius: 5px;
+  background: #adb1a7;
+  padding: 1rem;
 }
