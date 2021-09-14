@@ -1,1 +1,1 @@
-# JavaScript-Capstone-Project
+# Javascript-Capstone-Project
