@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Microverse-ToDo-List
+# JavaScript-Capstone-Project
 
 
 Additional description about the project and its features.
