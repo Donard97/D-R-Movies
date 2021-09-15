@@ -1,4 +1,4 @@
-Copyright 2021, [Rustamjon Tolipov]
+Copyright 2021, [Donard Golaj & Rustamjon Tolipov]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this Application and associated documentation files,
 to deal in the Application without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute,
