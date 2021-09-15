@@ -2,6 +2,9 @@
 import './style.css';
 import showsList from './displayElements';
 import getData from './getData';
+import showComments from './showComments';
+import getComments from './getComments';
+import postComments from './postComments';
 
 const showsContainer = document.querySelector('.movies-list');
 
@@ -42,8 +45,9 @@ window.addEventListener('load', async () => {
           </ul>
           <div class="popup-comments">
           <h2>Add comment</h2>
-          <input class="comments-input" type="search" placeholder="Add comment"/>
+          <input class="comments-input" type="search" placeholder="Add name"/>
           <textarea type="search" placeholder="Add insights"></textarea>
+          <button class="btn-comments" id="commentButton">Submit</button>
           </div>
           </div>
         </div>
@@ -58,4 +62,20 @@ window.addEventListener('load', async () => {
       popupMenu.appendChild(exit);
     });
   }
+
+  const commentButton = document.getElementById('commentButton')
+  const commentSection = document.createElement('div');
+  commentSection.classList.add('list-item');
+  console.log(commentSection);
+  const comments = await getComments(commentButton.id)
+
+  showComments(commentSection, comments)
+
+
+  commentButton.addEventListener('click', async (e) => {
+  e.preventDefault()
+  await postComments(commentButton.id, userName, userMsg);
+  const getComments1 = await getComments(commentButton.id)
+  showComments(commentSection, getComments1)
+  })
 });
