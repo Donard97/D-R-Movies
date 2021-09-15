@@ -9,7 +9,6 @@ window.addEventListener('load', async () => {
   // Launch showsList
   const movies = await getData();
   const loadedShows = movies.slice(0, 18);
-  console.log(loadedShows);
 
   showsList(loadedShows, showsContainer);
 

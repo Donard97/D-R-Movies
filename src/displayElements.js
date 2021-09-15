@@ -1,9 +1,12 @@
+import getLikes from './getLikes';
+import postLikes from './postLikes';
+
 const displayShows = (shows, moviesList) => {
-  for (let i = 0; i < shows.length; i += 1) {
+  for (let i = 0; i <= shows.length - 1; i += 1) {
     // const moviesList = document.querySelector('.movies-list');
     // Create li for each show
     const item = document.createElement('li');
-    item.id = `item${shows[i].id}`;
+    item.id = `movie_${shows[i].id}`;
     item.className = 'item';
 
     // Create img for display the show
@@ -14,15 +17,23 @@ const displayShows = (shows, moviesList) => {
     // Create div for title, likes
     const info = document.createElement('div');
     const title = document.createElement('p');
-    const like = document.createElement('p');
+    const likeDiv = document.createElement('div');
+    const like = document.createElement('ion-icon');
+    const likeDisplay = document.createElement('span');
+
     info.className = 'info';
     title.className = 'title';
+    likeDiv.className = 'like-div';
     like.className = 'like';
     title.textContent = `${shows[i].name}`;
-    like.innerHTML = '<ion-icon class="like" name="heart-outline"></ion-icon>';
+    like.setAttribute('name', 'heart');
+
+    like.id = `${item.id}`;
     item.appendChild(info);
     info.appendChild(title);
+    info.appendChild(likeDiv);
     info.appendChild(like);
+    info.appendChild(likeDisplay);
 
     // Create comments and reservations buttons
     const commentsBtn = document.createElement('button');
@@ -37,6 +48,16 @@ const displayShows = (shows, moviesList) => {
 
     // Make elements child of the movie container
     moviesList.appendChild(item);
+
+    like.addEventListener('click', async (e) => {
+      await postLikes(e.target.id);
+      const getReq = await getLikes();
+      for (let i = 0; i <= getReq.length - 1; i += 1) {
+        if (getReq[i].item_id === e.target.id) {
+          likeDisplay.innerHTML = `${getReq[i].likes}`;
+        }
+      }
+    });
   }
 };
 
