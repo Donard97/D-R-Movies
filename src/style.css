@@ -12,8 +12,8 @@ html {
 header {
   display: flex;
   background-color: rgba(197, 192, 192, 0.452);
-  padding: 2rem;
-  font-size: 3rem;
+  padding: 1rem;
+  font-size: 2rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -61,7 +61,8 @@ header {
   width: 25rem;
 }
 
-.comments {
+.comments,
+.reservation {
   font-size: 2rem;
 }
 
@@ -72,10 +73,128 @@ header {
   padding: 1rem;
 }
 
+.like {
+  display: inline;
+  width: 2.5rem;
+}
+
 .search {
   padding: 1rem;
 }
 
 .col-12 {
   width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(5, 5, 5, 0.849);
+  height: 100vh;
+  width: 100%;
+  font-size: 2rem;
+  padding: 20rem;
+}
+
+.popup {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  color: rgb(221, 216, 216);
+}
+
+.popup-img {
+  height: 50rem;
+  border-radius: 1rem;
+  border: rgba(255, 255, 255, 0.856) solid 0.1rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  color: rgb(226, 213, 213);
+}
+
+.details {
+  line-height: 4.5rem;
+  list-style: none;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+.summary-info {
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+}
+
+.summary-info b {
+  line-height: 3.5rem;
+  color: #fff;
+}
+
+.spec {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.resolution {
+  background-color: #a7c54c;
+  color: #000;
+  width: 4.5rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exit {
+  position: fixed;
+  font-size: 3rem;
+  right: 0;
+  padding: 5rem;
+  color: #fff;
+}
+
+.popup-comments {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+
+input[type="search"] {
+  background: transparent;
+  padding: 1rem;
+  font-weight: 600;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+textarea {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.popup-comments h2 {
+  font-size: 2.5rem;
+  padding: 1rem;
 }
