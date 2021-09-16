@@ -3,7 +3,6 @@ import postLikes from './postLikes';
 
 const displayShows = (shows, moviesList) => {
   for (let i = 0; i <= shows.length - 1; i += 1) {
-    // const moviesList = document.querySelector('.movies-list');
     // Create li for each show
     const item = document.createElement('li');
     item.id = `movie_${shows[i].id}`;

@@ -6,38 +6,42 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
   display: flex;
-  background-color: rgba(197, 192, 192, 0.452);
   padding: 1rem;
   font-size: 2rem;
   align-items: center;
   justify-content: space-between;
+  background: #133954;
 }
 
 .logo {
-  border-radius: 25px;
-  background: #adb1a7;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 .show-list {
-  border-radius: 5px;
-  background: #adb1a7;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 .footer {
   position: relative;
-  background-color: rgba(197, 192, 192, 0.452);
+  background: #133954;
   padding: 2rem;
   font-size: 2rem;
   text-align: center;
   bottom: 0;
   width: 100%;
+  color: white;
+  font-weight: 600;
 }
 
 .movies-list {
@@ -59,11 +63,26 @@ header {
 
 .item img {
   width: 25rem;
+  cursor: pointer;
+}
+
+.item img:hover {
+  width: 27rem;
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem;
 }
 
 .comments,
 .reservation {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.comments:hover,
+.reservation:hover {
+  background: #a7c54c;
+  color: white;
+  border: 1px solid #a7c54c;
+  padding: 5px;
 }
 
 .info {
@@ -117,7 +136,7 @@ header {
 }
 
 .popup-img {
-  height: 50rem;
+  height: 60rem;
   border-radius: 1rem;
   border: rgba(255, 255, 255, 0.856) solid 0.1rem;
 }
@@ -125,7 +144,6 @@ header {
 .summary {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
   color: rgb(226, 213, 213);
 }
 
@@ -136,12 +154,11 @@ header {
   padding: 0;
 }
 
-.summary-info {
-  font-size: 2.2rem;
-  line-height: 3.5rem;
+.description {
+  font-size: 17px;
 }
 
-.summary-info b {
+.description b {
   line-height: 3.5rem;
   color: #fff;
 }
@@ -168,26 +185,86 @@ header {
 
 .exit {
   position: fixed;
-  font-size: 3rem;
+  font-size: 5rem;
   right: 0;
   padding: 5rem;
   color: #fff;
 }
 
-.popup-comments {
+.list-item {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  gap: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 30rem;
+  border-radius: 1rem;
+  border: rgba(255, 255, 255, 0.856) solid 0.1rem;
+  padding: 1rem 0.5rem;
+  position: absolute;
+  width: 35%;
+  float: right;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
 }
 
-input[type="search"] {
+.list-item::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.list-item::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.list-item::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 95%;
+}
+
+.comment-btn {
+  border: 1px solid #a7c54c;
+  font-weight: 600;
   background: transparent;
+  width: 25%;
+  border-radius: 10px;
+  margin-right: 0;
+  color: white;
+  font-size: 1.5rem;
+  padding: 4px 0;
+}
+
+.comment-btn:hover {
+  background: #a7c54c;
+  font-size: 1.8rem;
+}
+
+.commentH3 {
+  font-size: 3rem;
   padding: 1rem;
+  color: #a7c54c;
+  margin-top: 8rem;
+}
+
+.name {
+  background: transparent;
+  padding: 0.7rem;
   font-weight: 600;
   border: 1px solid white;
   border-radius: 10px;
   color: white;
+  font-size: 1.5rem;
+  width: 40%;
 }
 
 textarea {
@@ -197,9 +274,7 @@ textarea {
   padding: 1rem;
   color: white;
   font-weight: 600;
-}
-
-.popup-comments h2 {
-  font-size: 2.5rem;
-  padding: 1rem;
+  width: 40%;
+  height: 15rem;
+  font-size: 1.5rem;
 }
