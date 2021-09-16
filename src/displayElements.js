@@ -30,8 +30,8 @@ const displayShows = (shows, moviesList) => {
     like.id = `${item.id}`;
     item.appendChild(info);
     info.appendChild(title);
+    likeDiv.appendChild(like);
     info.appendChild(likeDiv);
-    info.appendChild(like);
     info.appendChild(likeDisplay);
 
     // Create comments and reservations buttons
@@ -39,11 +39,11 @@ const displayShows = (shows, moviesList) => {
     commentsBtn.className = 'btn btn-dark comments';
     commentsBtn.innerHTML = 'Comments';
 
-    const reservationsBtn = document.createElement('button');
-    reservationsBtn.className = 'btn btn-dark reservation';
-    reservationsBtn.innerHTML = 'Reservations';
+    // const reservationsBtn = document.createElement('button');
+    // reservationsBtn.className = 'btn btn-dark reservation';
+    // reservationsBtn.innerHTML = 'Reservations';
     item.appendChild(commentsBtn);
-    item.appendChild(reservationsBtn);
+    // item.appendChild(reservationsBtn);
 
     // Make elements child of the movie container
     moviesList.appendChild(item);
