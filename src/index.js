@@ -5,11 +5,9 @@ import modalBody from './modal';
 
 const allShowsContainer = document.querySelector('.movies-list');
 
-
 window.addEventListener('load', async () => {
   const shows = await getData();
   const sixShows = shows.slice(0, 20);
-
 
   await displayShows(sixShows, allShowsContainer);
 

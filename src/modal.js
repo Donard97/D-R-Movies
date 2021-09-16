@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import getComments from './getComments';
 import postComments from './postComments';
 import showComments from './renderComments';
@@ -82,7 +84,6 @@ const modalBody = async (buttons, showsList) => {
         userName.value = '';
         userMsg.value = '';
       });
-
 
       const exit = document.createElement('div');
       exit.innerHTML = '<ion-icon class="exit" name="exit-outline"></ion-icon>';
