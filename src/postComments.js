@@ -1,5 +1,5 @@
 const postComments = async (button, userName, comment) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/azkOsPbkazhyvYbhmyjA/comments', {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/KY0cha7s0RdDoyqcn23E/comments', {
     method: 'POST',
     body: JSON.stringify({
       item_id: button,
@@ -11,7 +11,7 @@ const postComments = async (button, userName, comment) => {
     },
   });
 
-  return response.text()
-}
+  return response.text();
+};
 
 export default postComments;
