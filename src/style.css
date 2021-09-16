@@ -33,7 +33,6 @@ header {
 }
 
 .footer {
-  position: relative;
   background: #133954;
   padding: 2rem;
   font-size: 2rem;
@@ -42,6 +41,11 @@ header {
   width: 100%;
   color: white;
   font-weight: 600;
+}
+
+.movies {
+  width: 80%;
+  margin: auto;
 }
 
 .movies-list {
@@ -64,11 +68,13 @@ header {
 .item img {
   width: 25rem;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .item img:hover {
   width: 27rem;
   box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem;
+  transition: 0.3s;
 }
 
 .comments,
@@ -100,6 +106,7 @@ header {
 .like {
   display: inline;
   width: 2.5rem;
+  cursor: pointer;
 }
 
 .search {
@@ -278,3 +285,5 @@ textarea {
   height: 15rem;
   font-size: 1.5rem;
 }
+
+
