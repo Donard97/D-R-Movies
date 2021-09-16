@@ -9,11 +9,16 @@ window.addEventListener('load', async () => {
   const shows = await getData();
   const displayedShows = shows.slice(0, 20);
 
-  await displayShows(displayedShows, allShowsContainer);
+  displayShows(displayedShows, allShowsContainer);
 
   const commentPopup = [...document.querySelectorAll('.comments')];
   modalBody(commentPopup, displayedShows);
 
-  const showsCount = document.querySelector('.show-list');
-  showsCount.innerHTML = `Shows ${commentPopup.length}`;
+  const showsCounts = document.querySelector('.show-list');
+  const showsCount = (shows) => {
+  showsCounts.innerHTML = `Shows ${shows.length}`;
+  }
+  showsCount(commentPopup);
 });
+
+
