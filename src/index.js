@@ -7,10 +7,13 @@ const allShowsContainer = document.querySelector('.movies-list');
 
 window.addEventListener('load', async () => {
   const shows = await getData();
-  const sixShows = shows.slice(0, 20);
+  const displayedShows = shows.slice(0, 20);
 
-  await displayShows(sixShows, allShowsContainer);
+  await displayShows(displayedShows, allShowsContainer);
 
   const commentPopup = [...document.querySelectorAll('.comments')];
-  modalBody(commentPopup, sixShows);
+  modalBody(commentPopup, displayedShows);
+
+  const showsCount = document.querySelector('.show-list');
+  showsCount.innerHTML = `Shows ${commentPopup.length}`;
 });
