@@ -14,11 +14,13 @@ window.addEventListener('load', async () => {
   const commentPopup = [...document.querySelectorAll('.comments')];
   modalBody(commentPopup, displayedShows);
 
+  const showsCount = (showsList) => showsList.length;
+
+  showsCount(shows);
+
   const showsCounts = document.querySelector('.show-list');
-  const showsCount = (shows) => {
-  showsCounts.innerHTML = `Shows ${shows.length}`;
-  }
-  showsCount(commentPopup);
+  const showsCountss = (shows) => {
+    showsCounts.innerHTML = `Shows ${shows.length}`;
+  };
+  showsCountss(commentPopup);
 });
-
-

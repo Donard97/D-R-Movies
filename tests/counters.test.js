@@ -1,8 +1,8 @@
-  import showsCount from '../src/__mocks__/mock.showCounts.js';
-  import getCommentCount from '../src/__mocks__/mock.getCommentCount.js';
+import showsCount from '../src/__mocks__/mock.showCounts.js';
+import getCommentCount from '../src/__mocks__/mock.getCommentCount';
 
 test('returns 6 when length of array is 6', () => {
-  const list = [{ item: 1 }, { item: 3 }, { item: 2 }, { item: 5 }, { item: 4 }, { item: 10 }];
+  const list = [{ item: 1 }, { item: 2 }, { item: 3 }, { item: 4 }, { item: 5 }, { item: 6 }];
   const count = showsCount(list);
   expect(count).toBe(6);
 });
@@ -18,7 +18,6 @@ test('returns 0 when array is empty', () => {
   const count = showsCount(list);
   expect(count).toBe(0);
 });
-
 
 test('returns 1 when length is one', () => {
   const container = { textContent: 'lorem' };

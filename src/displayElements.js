@@ -27,6 +27,16 @@ const displayShows = (shows, moviesList) => {
     title.textContent = `${shows[i].name}`;
     like.setAttribute('name', 'heart');
 
+    window.addEventListener('load', async (e) => {
+      await postLikes(e.target.id);
+      const getReq = await getLikes();
+      for (let i = 0; i <= getReq.length - 1; i += 1) {
+        if (getReq[i].item_id === e.target.id) {
+          likeDisplay.innerHTML = `${getReq[i].likes}`;
+        }
+      }
+    });
+
     like.id = `${item.id}`;
     item.appendChild(info);
     info.appendChild(title);
@@ -42,7 +52,7 @@ const displayShows = (shows, moviesList) => {
     // const reservationsBtn = document.createElement('button');
     // reservationsBtn.className = 'btn btn-dark reservation';
     // reservationsBtn.innerHTML = 'Reservations';
-    item.appendChild(commentsBtn);
+    // item.appendChild(commentsBtn);
     // item.appendChild(reservationsBtn);
 
     // Make elements child of the movie container
