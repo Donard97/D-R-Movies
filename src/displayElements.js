@@ -3,7 +3,6 @@ import getLikes from './getLikes';
 import postLikes from './postLikes';
 import modalBody from './modal';
 
-
 const displayShows = async (shows, moviesList, displayedShows) => {
   for (let i = 0; i <= shows.length - 1; i += 1) {
     // Create li for each show
@@ -41,10 +40,10 @@ const displayShows = async (shows, moviesList, displayedShows) => {
     const commentsBtn = document.createElement('button');
     commentsBtn.className = 'btn btn-dark comments';
     commentsBtn.innerHTML = 'Comments';
-    commentsBtn.addEventListener('click', ()=> {
+    commentsBtn.addEventListener('click', () => {
       const commentPopup = [...document.querySelectorAll('.comments')];
       modalBody(commentPopup, displayedShows);
-    })
+    });
 
     item.appendChild(commentsBtn);
 
