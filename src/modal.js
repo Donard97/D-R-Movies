@@ -6,9 +6,7 @@ import showComments from './renderComments';
 
 const getCommentCount = (section, lists) => {
   section.textContent = '';
-  lists.length >= 1 
-  ? (section.textContent = `Comments (${lists.length})`)
-  : (section.textContent = 'Comments (0)');
+  lists.length >= 1 ? (section.textContent = `Comments (${lists.length})`) : (section.textContent = 'Comments (0)');
 };
 
 const modalBody = async (buttons, showsList) => {

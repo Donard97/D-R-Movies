@@ -14,7 +14,7 @@ window.addEventListener('load', async () => {
   const commentPopup = [...document.querySelectorAll('.comments')];
   modalBody(commentPopup, displayedShows);
 
-  const showsCount = (showsList) => showsList.length;
+  const showsCount = (shows) => shows.length;
 
   showsCount(shows);
 
@@ -22,5 +22,5 @@ window.addEventListener('load', async () => {
   const showsCountss = (shows) => {
     showsCounts.innerHTML = `Shows ${shows.length}`;
   };
-  showsCountss(commentPopup);
+  showsCountss(shows.slice(0, 20));
 });

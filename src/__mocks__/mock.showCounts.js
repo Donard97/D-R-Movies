@@ -1,5 +1,3 @@
-const showsCounts = (showsList) => showsList.length;
-
-showsCounts(20);
+const showsCounts = (shows) => shows.length;
 
 export default showsCounts;

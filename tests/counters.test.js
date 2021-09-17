@@ -1,4 +1,4 @@
-import showsCount from '../src/__mocks__/mock.showCounts.js';
+import showsCount from '../src/__mocks__/mock.showCounts';
 import getCommentCount from '../src/__mocks__/mock.getCommentCount';
 
 test('returns 6 when length of array is 6', () => {
