@@ -4,6 +4,8 @@
 
 D&R Movies is a website when you can look about movies and TV Series that you like. Now you can only learn a few things about them and comment if you want but We are still working on it to add new pages and give access for what YOU need for.
 
+ [Here you can watch a live presentation of D&R Movies](https://drive.google.com/file/d/1CW5ogVZFZX5B6bkvuVrTwWpW3pOViWrI/view?usp=sharing)<br>
+ 
 ![image](https://user-images.githubusercontent.com/74506933/133765779-73cc5d8a-6d6a-4e35-a21a-941c7c04a6bf.png)
 
 Additional description about the project and its features.
@@ -31,9 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-
-[Here you can watch a live presentation of D&R Movies](https://drive.google.com/file/d/1CW5ogVZFZX5B6bkvuVrTwWpW3pOViWrI/view?usp=sharing)
-[Live Demo Link](https://donard97.github.io/D-R-Movies/)
+ [Live Demo Link](https://donard97.github.io/D-R-Movies/)
 
 ### Install
 
