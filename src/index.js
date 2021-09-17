@@ -9,7 +9,7 @@ window.addEventListener('load', async () => {
   const shows = await getData();
   const displayedShows = shows.slice(0, 20);
 
-  displayShows(displayedShows, allShowsContainer);
+  displayShows(displayedShows, allShowsContainer, displayedShows);
 
   const commentPopup = [...document.querySelectorAll('.comments')];
   modalBody(commentPopup, displayedShows);
