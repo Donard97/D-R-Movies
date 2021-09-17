@@ -26,9 +26,13 @@ To get a local copy up and running follow these simple example steps.
 - Git
 - GitHub
 - Node Js
+- API
+- Webpack
 
 ## Live Demo
 
+
+[Here you can watch a live presentation of D&R Movies](https://drive.google.com/file/d/1CW5ogVZFZX5B6bkvuVrTwWpW3pOViWrI/view?usp=sharing)
 [Live Demo Link](https://donard97.github.io/D-R-Movies/)
 
 ### Install
