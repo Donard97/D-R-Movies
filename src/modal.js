@@ -69,7 +69,6 @@ const modalBody = async (buttons, showsList) => {
 
       const errorMsg = document.createElement('p');
       errorMsg.className = 'error-msg';
-      
 
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('list-item');
@@ -78,7 +77,7 @@ const modalBody = async (buttons, showsList) => {
 
       showComments(commentDiv, comments);
       comments.length >= 1 ? (commentSection.textContent = `Comments (${comments.length})`) : (commentSection.textContent = 'Comments (0)');
-      
+
       commentButton.addEventListener('click', async (e) => {
         e.preventDefault();
 
@@ -93,7 +92,6 @@ const modalBody = async (buttons, showsList) => {
           userMsg.value = '';
         }
       });
-
 
       const exit = document.createElement('div');
       exit.innerHTML = '<ion-icon class="exit" name="exit-outline"></ion-icon>';
