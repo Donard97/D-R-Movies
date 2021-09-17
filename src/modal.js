@@ -67,6 +67,10 @@ const modalBody = async (buttons, showsList) => {
       commentButton.textContent = 'Submit';
       commentButton.id = `movie_cmt_${showsList[i].id}`;
 
+      const errorMsg = document.createElement('p');
+      errorMsg.className = 'error-msg';
+      
+
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('list-item');
 
@@ -74,16 +78,22 @@ const modalBody = async (buttons, showsList) => {
 
       showComments(commentDiv, comments);
       comments.length >= 1 ? (commentSection.textContent = `Comments (${comments.length})`) : (commentSection.textContent = 'Comments (0)');
-
+      
       commentButton.addEventListener('click', async (e) => {
         e.preventDefault();
-        await postComments(commentButton.id, userName, userMsg);
-        const getCmts = await getComments(commentButton.id);
-        getCommentCount(commentSection, getCmts);
-        showComments(commentDiv, getCmts);
-        userName.value = '';
-        userMsg.value = '';
+
+        if (userName.value === '') {
+          errorMsg.innerHTML = 'Please insert your name and message!';
+        } else {
+          await postComments(commentButton.id, userName, userMsg);
+          const getCmts = await getComments(commentButton.id);
+          getCommentCount(commentSection, getCmts);
+          showComments(commentDiv, getCmts);
+          userName.value = '';
+          userMsg.value = '';
+        }
       });
+
 
       const exit = document.createElement('div');
       exit.innerHTML = '<ion-icon class="exit" name="exit-outline"></ion-icon>';
@@ -93,7 +103,7 @@ const modalBody = async (buttons, showsList) => {
 
       summary.append(description, spec, commentSection, commentDiv, addComment, commentForm);
       modal.append(img, summary);
-      commentForm.append(userName, userMsg, commentButton);
+      commentForm.append(userName, userMsg, commentButton, errorMsg);
       overlay.appendChild(modal);
       popupMenu.appendChild(overlay);
       popupMenu.appendChild(exit);
