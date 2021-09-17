@@ -2,7 +2,7 @@
 
 # D&R Movies
 
-D&R Movies is a website when you can look about movies and TV Series that you like. Now you can only learn a few things about It and comment if you want but We are still working on it to add new pages and give access for what YOU need for.
+D&R Movies is a website when you can look about movies and TV Series that you like. Now you can only learn a few things about them and comment if you want but We are still working on it to add new pages and give access for what YOU need for.
 
 ![image](https://user-images.githubusercontent.com/74506933/133765779-73cc5d8a-6d6a-4e35-a21a-941c7c04a6bf.png)
 
